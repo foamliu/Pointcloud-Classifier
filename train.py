@@ -1,6 +1,6 @@
 import kaolin as kal
 import torch
-from datagen import ModelNet10
+from data_gen import ModelNet10
 from torch.utils.data import DataLoader
 from tqdm import tqdm
 
