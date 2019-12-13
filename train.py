@@ -9,12 +9,12 @@ epochs = 10
 lr = 1e-3
 device = 'cuda:0'
 normpc = kal.transforms.NormalizePointCloud()
-data = ModelNet10('/path/to/ModelNet10',
+data = ModelNet10('data/ModelNet10',
                   categories=['bed', 'bathtub'],
                   split='train', rep='pointcloud',
                   transform=normpc, device=device)
 loader = DataLoader(data, batch_size=12, shuffle=True)
-val_data = ModelNet10('/path/to/ModelNet10',
+val_data = ModelNet10('data/ModelNet10',
                       categories=['bed', 'bathtub'],
                       split='test', rep='pointcloud',
                       transform=normpc, device=device)
