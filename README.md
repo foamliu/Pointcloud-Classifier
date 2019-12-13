@@ -6,7 +6,7 @@ Pointcloud classification based on kaolin's implementation of PointNet: Deep Lea
 
 [ModelNet10](https://modelnet.cs.princeton.edu/) contains CAD models from the 10 categories
 
-![image](https://github.com/foamliu/Pointcloud_Classifier/raw/master/images/shape_samples.jpg)
+![image](https://github.com/foamliu/Pointcloud-Classifier/raw/master/images/shape_samples.jpg)
 
 ## Dependencies
 - Python 3.6.8
