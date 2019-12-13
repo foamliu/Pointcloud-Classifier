@@ -32,8 +32,12 @@ $ python extract.py
 $ python train.py
 ```
 
-To visualize the training process：
-```bash
-$ tensorboard --logdir=runs
-```
+### Result
 
+<pre>
+Train loss: 0.11194922991405921
+Train accuracy: 0.9599359069879239
+100%|████████| 15/15 [00:08<00:00,  1.70it/s]
+Val loss: 0.09645371088020814
+Val accuracy: 0.9600000063578288
+</pre>
