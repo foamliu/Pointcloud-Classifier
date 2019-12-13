@@ -1,6 +1,6 @@
 import kaolin as kal
 import torch
-from kal.datasets.modelnet import ModelNet
+from kaolin.datasets.modelnet import ModelNet
 from torch.utils.data import DataLoader
 from tqdm import tqdm
 
