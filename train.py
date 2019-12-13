@@ -1,5 +1,6 @@
 import kaolin as kal
 import torch
+from kal.datasets.modelnet import ModelNet
 from torch.utils.data import DataLoader
 from tqdm import tqdm
 
@@ -7,15 +8,15 @@ epochs = 10
 lr = 1e-3
 device = 'cuda:0'
 normpc = kal.transforms.NormalizePointCloud()
-data = kal.datasets.ModelNet10('data/ModelNet10',
-                               categories=['bed', 'bathtub'],
-                               split='train', rep='pointcloud',
-                               transform=normpc, device=device)
+data = ModelNet('data/ModelNet10',
+                categories=['bed', 'bathtub'],
+                split='train', rep='pointcloud',
+                transform=normpc, device=device)
 loader = DataLoader(data, batch_size=12, shuffle=True)
-val_data = kal.datasets.ModelNet10('data/ModelNet10',
-                                   categories=['bed', 'bathtub'],
-                                   split='test', rep='pointcloud',
-                                   transform=normpc, device=device)
+val_data = ModelNet('data/ModelNet10',
+                    categories=['bed', 'bathtub'],
+                    split='test', rep='pointcloud',
+                    transform=normpc, device=device)
 val_loader = DataLoader(val_data, batch_size=10, shuffle=False)
 model = kal.models.PointNet.PointNetClassifier(num_classes=2).to(device)
 optimizer = torch.optim.Adam(model.parameters(), lr=lr)
